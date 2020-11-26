@@ -112,8 +112,6 @@ def main():
     plt.style.use('dark_background')
     fig = plt.figure()
     grid = plt.GridSpec(3, 1, wspace = 0.0, hspace = 0.3)
-    mng = plt.get_current_fig_manager()
-    mng.resize(*mng.window.maxsize())
 
     # simulation loop
     for i in range(Nt):
