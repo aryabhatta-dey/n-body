@@ -112,7 +112,9 @@ def main():
     plt.style.use('dark_background')
     fig = plt.figure()
     grid = plt.GridSpec(3, 1, wspace = 0.0, hspace = 0.3)
-    
+    mng = plt.get_current_fig_manager()
+    mng.resize(*mng.window.maxsize())
+
     # simulation loop
     for i in range(Nt):
         # using leapfrog integration. https://en.wikipedia.org/wiki/Leapfrog_integration
@@ -144,6 +146,7 @@ def main():
         plt.scatter(R[:,0], R[:,1], s=10, color ='white')
         plt.pause(0.001)
     
+    plt.show()
     return 0
     
 if __name__== "__main__":
