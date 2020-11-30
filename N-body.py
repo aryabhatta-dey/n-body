@@ -106,12 +106,9 @@ def main():
     # save particle orbits for plotting trails
     position_save = np.zeros((N, 3, Nt+1))
     position_save[:,:,0] = R
-    t_all = np.arange(Nt + 1)*dt
     
     # figure
     plt.style.use('dark_background')
-    fig = plt.figure()
-    grid = plt.GridSpec(3, 1, wspace = 0.0, hspace = 0.3)
 
     # simulation loop
     for i in range(Nt):
